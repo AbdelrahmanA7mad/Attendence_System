@@ -1,0 +1,34 @@
+﻿@model Attendence_System.ViewModel.CourseViewModel
+
+<h2 class="text-center mt-3">Manage Your Courses</h2>
+
+<!-- Add New Course Form -->
+<form asp-action="Index" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Course Name" id="Name" name="Name" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Course</button>
+</form>
+
+<hr>
+@if (Model.Courses != null && Model.Courses.Any())
+{
+    @foreach (var course in Model.Courses)
+    {
+        <div class="d-flex align-items-center mt-3">
+            <form method="get" asp-action="ViewLectures" asp-route-id="@course.CourseId" class="flex-grow-1">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    @course.Name
+                </button>
+            </form>
+            <button class="btn btn-danger rounded rounded-3 ms-2 js-delete" data-id="@course.CourseId" data-type="course" aria-label="Delete @course.Name">
+                <i class="bi bi-trash3"></i>
+            </button>
+        </div>
+    }
+}
+else
+{
+    <p class="text-center">No courses added yet.</p>
+}

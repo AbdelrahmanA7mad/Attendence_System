@@ -1,0 +1,38 @@
+﻿@model Attendence_System.ViewModel.LectureWithCourse
+
+@{
+    ViewData["Title"] = "View Lectures";
+}
+
+<h2 class="text-center">@Model.CouresName Lectures</h2>
+
+<form method="get" asp-controller="Lecture" asp-action="CalcAttendence" asp-route-Id="@Model.CourseId" class="mb-3">
+    <button type="submit" class="btn btn-info btn-lg w-100">
+        View Attendance Stats for All Lectures
+    </button>
+</form>
+
+<h2 class="text-center">@Model.CouresName Lectures</h2>
+
+@if (Model.Lectures != null && Model.Lectures.Any())
+{
+    foreach (var lecture in Model.Lectures)
+    {
+        <div class="d-flex align-items-center mt-3">
+            <form method="get" asp-controller="Lecture" asp-action="Index" asp-route-id="@lecture.LectureId" class="flex-grow-1">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    @lecture.Title
+                </button>
+            </form>
+            <button class="btn btn-danger rounded rounded-3 ms-2 js-delete" data-id="@lecture.LectureId" data-type="lecture" aria-label="Delete @lecture.Title">
+                <i class="bi bi-trash3"></i>
+            </button>
+        </div>
+    }
+}
+else
+{
+    <p>No lectures found for this course.</p>
+}
+
+<a href="@Url.Action("Index", "Manage")" class="btn btn-secondary mt-3">Back to Course List</a>

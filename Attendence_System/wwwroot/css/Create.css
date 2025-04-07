@@ -1,0 +1,141 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.fuck {
+    width:60%;
+    margin:auto;
+}
+/* Form Container */
+.customform {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 40px;
+    padding: 30px 40px;
+}
+
+
+.col-md-12 {
+    margin-bottom: 20px;
+}
+
+/* Label Styles */
+Lable{
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Input Styles */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+    input[type="text"]:focus {
+        border-color: #007bff;
+    }
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+/* QR Code Section */
+.qr-code-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+    .qr-code-container h4 {
+        font-size: 1.2rem;
+        color: #555;
+    }
+
+    .qr-code-container img {
+        width:700px;
+        height:700px;
+        margin-top: 15px;
+    }
+
+/* Spacing and Margin Adjustments */
+.mt-3 {
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-control {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+}

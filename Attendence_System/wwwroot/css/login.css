@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #151e47;
+}
+
+.btnnn:hover {
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if you want */
+    font-size: 60px;
+    position: fixed;
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    color: #e0e0e0;
+    width: 100%; /* Full width to ensure it spans across the viewport */
+    text-align: center; /* Center text within the header */
+    padding: 20px 0; /* Optional: Adds padding above and below */
+}
+
+h2 {
+    color: white;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 520px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 40px;
+    padding: 30px 40px;
+}
+
+    .wrapper h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .wrapper .input-box {
+        width: 100%;
+        height: 50px;
+        margin: 30px 0;
+    }
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #0c0e2b;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+    font-size: 16px;
+    color: red;
+    outline: none;
+}
+
+    .input-box input::placeholder {
+        color: #0c0e2b;
+    }
+
+.wrapper .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forget label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: white;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+    .wrapper .btn:hover {
+        cursor: pointer;
+        background-color: darkblue;
+        color: #fff;
+    }
+
+.wrapper .register {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    .register a:hover {
+        text-decoration: underline;
+    }
